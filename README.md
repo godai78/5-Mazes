@@ -1,5 +1,5 @@
 # 5-Mazes
- A maze game
+The Game Boy "5 mazes".
  
  Roam the mazes with Alice! Each one is more and more difficult.
  
