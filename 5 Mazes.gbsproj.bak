@@ -24349,16 +24349,11 @@
                     "id": "b1b95d0f-b142-495a-b8a0-c9d5bff51771"
                 },
                 {
-                    "command": "EVENT_AWAIT_INPUT",
+                    "command": "EVENT_WAIT",
                     "args": {
-                        "input": [
-                            "a",
-                            "b",
-                            "start",
-                            "select"
-                        ]
+                        "time": 6
                     },
-                    "id": "e24dc17c-6856-40a1-aae8-2ad78fa4bf8e"
+                    "id": "ec651818-e4fc-43b7-86a9-5b4cd02617a0"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
@@ -25815,7 +25810,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1749,
+        "worldScrollX": 0,
         "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
