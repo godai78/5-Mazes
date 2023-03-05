@@ -383,11 +383,9 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000009  ___bank_music_track_1__Data        music_track_1__Data
      00000009  ___bank_music_track_2__Data        music_track_2__Data
      00000009  ___bank_music_track_6__Data        music_track_6__Data
-     00000009  ___bank_palette_0                  palette_0
+     00000009  ___bank_scene_0_actors             scene_0_actors
      00000009  ___bank_scene_0_collisions         scene_0_collisions
      00000009  ___bank_scene_2_collisions         scene_2_collisions
-     00000009  ___bank_script_s1_init             script_s1_init
-     00000009  ___bank_spritesheet_none           spritesheet_none
      00000009  ___bank_tilemap_0                  tilemap_0
      00000009  ___bank_tileset_4                  tileset_4
      0000000A  ___bank_background_0               background_0
@@ -399,7 +397,9 @@ Area                                    Addr        Size        Decimal Bytes (A
      0000000A  ___bank_background_6               background_6
      0000000A  ___bank_background_7               background_7
      0000000A  ___bank_music_track_3__Data        music_track_3__Data
+     0000000A  ___bank_palette_0                  palette_0
      0000000A  ___bank_palette_1                  palette_1
+     0000000A  ___bank_scene_0_sprites            scene_0_sprites
      0000000A  ___bank_scene_1                    scene_1
      0000000A  ___bank_scene_1_collisions         scene_1_collisions
      0000000A  ___bank_scene_1_triggers           scene_1_triggers
@@ -416,7 +416,7 @@ Area                                    Addr        Size        Decimal Bytes (A
      0000000A  ___bank_scene_7                    scene_7
      0000000A  ___bank_scene_7_collisions         scene_7_collisions
      0000000A  ___bank_script_s0_init             script_s0_init
-     0000000A  ___bank_script_s1t0_interact       script_s1t0_interact
+     0000000A  ___bank_script_s1_init             script_s1_init
 ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
 Hexadecimal  [32-Bits]
 
@@ -426,6 +426,7 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
+     0000000A  ___bank_script_s1t0_interact       script_s1t0_interact
      0000000A  ___bank_script_s2_init             script_s2_init
      0000000A  ___bank_script_s2t0_interact       script_s2t0_interact
      0000000A  ___bank_script_s3_init             script_s3_init
@@ -434,9 +435,12 @@ Area                                    Addr        Size        Decimal Bytes (A
      0000000A  ___bank_script_s5_init             script_s5_init
      0000000A  ___bank_script_s5t0_interact       script_s5t0_interact
      0000000A  ___bank_script_s7_init             script_s7_init
+     0000000A  ___bank_spritesheet_1              spritesheet_1
+     0000000A  ___bank_spritesheet_none           spritesheet_none
      0000000A  ___bank_tilemap_4                  tilemap_4
      0000000A  ___bank_tilemap_5                  tilemap_5
      0000000A  ___bank_tilemap_6                  tilemap_6
+     0000000A  ___bank_tileset_5                  tileset_5
      0000000C  __start_save                    
      00000010  l__INITIALIZED                  
      00000010  l__INITIALIZER                  
@@ -448,7 +452,7 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000200  s__CODE                         
      00000668  l__CODE                         
      00000868  s__HOME                         
-     000010B5  l__CODE_10                      
+     00001178  l__CODE_10                      
      000018FD  l__DATA                         
      00002000  _rROMB0                            
      000026A6  l__HOME                         
@@ -466,17 +470,13 @@ Area                                    Addr        Size        Decimal Bytes (A
      00003FFE  l__CODE_5                       
      00003FFE  l__CODE_6                       
      00003FFE  l__CODE_8                       
+     00003FFF  l__CODE_9                       
      00004000  _RTC_SELECT_REG                    vm_rtc
      00004000  _rRAMB                             
      00004000  l__CODE_7                       
-     00004000  l__CODE_9                       
      00006000  _RTC_LATCH_REG                     vm_rtc
      00008000  __VRAM                             
      00008000  __VRAM8000                         
-     00008800  __VRAM8800                         
-     00009000  __VRAM9000                         
-     00009800  __SCRN0                            
-     00009C00  __SCRN1                            
 ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
 Hexadecimal  [32-Bits]
 
@@ -486,6 +486,10 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
+     00008800  __VRAM8800                         
+     00009000  __VRAM9000                         
+     00009800  __SCRN0                            
+     00009C00  __SCRN1                            
      0000A000  _RTC_VALUE_REG                     vm_rtc
      0000A000  __SRAM                             
      0000C000  __RAM                              
@@ -533,10 +537,6 @@ Area                                    Addr        Size        Decimal Bytes (A
      0000FF30  _AUD3WAVE                          
      0000FF30  _PCM_SAMPLE                        
      0000FF30  __AUD3WAVERAM                      
-     0000FF40  _LCDC_REG                          
-     0000FF41  _STAT_REG                          
-     0000FF42  _SCY_REG                           
-     0000FF43  _SCX_REG                           
 ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
 Hexadecimal  [32-Bits]
 
@@ -546,6 +546,10 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
+     0000FF40  _LCDC_REG                          
+     0000FF41  _STAT_REG                          
+     0000FF42  _SCY_REG                           
+     0000FF43  _SCX_REG                           
      0000FF44  _LY_REG                            
      0000FF45  _LYC_REG                           
      0000FF46  _DMA_REG                           
@@ -582,7 +586,6 @@ Area                                    Addr        Size        Decimal Bytes (A
      00084000  s__CODE_8                       
      00094000  s__CODE_9                       
      000A4000  s__CODE_10                      
-
 ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
 Hexadecimal  [32-Bits]
 
@@ -1715,7 +1718,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE_10                            000A4000    000010B5 =        4277. bytes (REL,CON)
+_CODE_10                            000A4000    00001178 =        4472. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1739,63 +1742,81 @@ _CODE_10                            000A4000    000010B5 =        4277. bytes (R
      000A4070  _music_track_3_0                   music_track_3__Data
      000A41A7  _music_track_3_1                   music_track_3__Data
      000A42C6  _music_track_3__Data               music_track_3__Data
-     000A42CC  ___func_palette_1                  palette_1
-     000A42CC  _palette_1                         palette_1
-     000A42CF  ___func_scene_1_collisions         scene_1_collisions
-     000A42CF  _scene_1_collisions                scene_1_collisions
-     000A44B3  ___func_scene_1_triggers           scene_1_triggers
-     000A44B3  _scene_1_triggers                  scene_1_triggers
-     000A44BB  ___func_scene_1                    scene_1
-     000A44BB  _scene_1                           scene_1
-     000A44F6  ___func_scene_2_triggers           scene_2_triggers
-     000A44F6  _scene_2_triggers                  scene_2_triggers
-     000A44FE  ___func_scene_2                    scene_2
-     000A44FE  _scene_2                           scene_2
-     000A4539  ___func_scene_3_triggers           scene_3_triggers
-     000A4539  _scene_3_triggers                  scene_3_triggers
-     000A4541  ___func_scene_3                    scene_3
-     000A4541  _scene_3                           scene_3
-     000A457C  ___func_scene_4_triggers           scene_4_triggers
-     000A457C  _scene_4_triggers                  scene_4_triggers
-     000A4584  ___func_scene_4                    scene_4
-     000A4584  _scene_4                           scene_4
-     000A45BF  ___func_scene_5_triggers           scene_5_triggers
-     000A45BF  _scene_5_triggers                  scene_5_triggers
-     000A45C7  ___func_scene_5                    scene_5
-     000A45C7  _scene_5                           scene_5
-     000A4602  ___func_scene_6_collisions         scene_6_collisions
-     000A4602  _scene_6_collisions                scene_6_collisions
-     000A476A  ___func_scene_6                    scene_6
-     000A476A  _scene_6                           scene_6
-     000A47A5  ___func_scene_7_collisions         scene_7_collisions
-     000A47A5  _scene_7_collisions                scene_7_collisions
+     000A42CC  ___func_palette_0                  palette_0
+     000A42CC  _palette_0                         palette_0
+     000A42CF  ___func_palette_1                  palette_1
+     000A42CF  _palette_1                         palette_1
+     000A42D2  ___func_scene_0_sprites            scene_0_sprites
+     000A42D2  _scene_0_sprites                   scene_0_sprites
+     000A42D5  ___func_scene_1_collisions         scene_1_collisions
+     000A42D5  _scene_1_collisions                scene_1_collisions
+     000A44B9  ___func_scene_1_triggers           scene_1_triggers
+     000A44B9  _scene_1_triggers                  scene_1_triggers
+     000A44C1  ___func_scene_1                    scene_1
+     000A44C1  _scene_1                           scene_1
+     000A44FC  ___func_scene_2_triggers           scene_2_triggers
+     000A44FC  _scene_2_triggers                  scene_2_triggers
+     000A4504  ___func_scene_2                    scene_2
+     000A4504  _scene_2                           scene_2
+     000A453F  ___func_scene_3_triggers           scene_3_triggers
+     000A453F  _scene_3_triggers                  scene_3_triggers
+     000A4547  ___func_scene_3                    scene_3
+     000A4547  _scene_3                           scene_3
+     000A4582  ___func_scene_4_triggers           scene_4_triggers
+     000A4582  _scene_4_triggers                  scene_4_triggers
+     000A458A  ___func_scene_4                    scene_4
+     000A458A  _scene_4                           scene_4
+     000A45C5  ___func_scene_5_triggers           scene_5_triggers
+     000A45C5  _scene_5_triggers                  scene_5_triggers
+     000A45CD  ___func_scene_5                    scene_5
+     000A45CD  _scene_5                           scene_5
+     000A4608  ___func_scene_6_collisions         scene_6_collisions
+     000A4608  _scene_6_collisions                scene_6_collisions
 ASxxxx Linker V03.00 + NoICE + sdld,  page 57.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE_10                            000A4000    000010B5 =        4277. bytes (REL,CON)
+_CODE_10                            000A4000    00001178 =        4472. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     000A490D  ___func_scene_7                    scene_7
-     000A490D  _scene_7                           scene_7
-     000A4948  _script_s0_init                    script_s0_init
-     000A499B  _script_s1t0_interact              script_s1t0_interact
-     000A49F5  _script_s2_init                    script_s2_init
-     000A4A0C  _script_s2t0_interact              script_s2t0_interact
-     000A4A60  _script_s3_init                    script_s3_init
-     000A4A77  _script_s4_init                    script_s4_init
-     000A4A8E  _script_s4t0_interact              script_s4t0_interact
-     000A4AFB  _script_s5_init                    script_s5_init
-     000A4B12  _script_s5t0_interact              script_s5t0_interact
-     000A4B78  _script_s7_init                    script_s7_init
-     000A4C01  ___func_tilemap_4                  tilemap_4
-     000A4C01  _tilemap_4                         tilemap_4
-     000A4DE5  ___func_tilemap_5                  tilemap_5
-     000A4DE5  _tilemap_5                         tilemap_5
-     000A4F4D  ___func_tilemap_6                  tilemap_6
-     000A4F4D  _tilemap_6                         tilemap_6
+     000A4770  ___func_scene_6                    scene_6
+     000A4770  _scene_6                           scene_6
+     000A47AB  ___func_scene_7_collisions         scene_7_collisions
+     000A47AB  _scene_7_collisions                scene_7_collisions
+     000A4913  ___func_scene_7                    scene_7
+     000A4913  _scene_7                           scene_7
+     000A494E  _script_s0_init                    script_s0_init
+     000A49A1  _script_s1_init                    script_s1_init
+     000A49B8  _script_s1t0_interact              script_s1t0_interact
+     000A4A12  _script_s2_init                    script_s2_init
+     000A4A29  _script_s2t0_interact              script_s2t0_interact
+     000A4A7D  _script_s3_init                    script_s3_init
+     000A4A94  _script_s4_init                    script_s4_init
+     000A4AAB  _script_s4t0_interact              script_s4t0_interact
+     000A4B18  _script_s5_init                    script_s5_init
+     000A4B2F  _script_s5t0_interact              script_s5t0_interact
+     000A4B95  _script_s7_init                    script_s7_init
+     000A4C1E  ___func_spritesheet_1              spritesheet_1
+     000A4C1E  _spritesheet_1_metasprite_0        spritesheet_1
+     000A4C3A  _spritesheet_1_metasprite_1        spritesheet_1
+     000A4C56  _spritesheet_1_metasprite_2        spritesheet_1
+     000A4C5A  _spritesheet_1_metasprites         spritesheet_1
+     000A4C64  _spritesheet_1_animations          spritesheet_1
+     000A4C74  _spritesheet_1_animations_lookup   spritesheet_1
+     000A4C76  _spritesheet_1                     spritesheet_1
+     000A4C89  _spritesheet_none_metasprite       spritesheet_none
+     000A4C8D  _spritesheet_none_metasprites      spritesheet_none
+     000A4C8F  _spritesheet_none                  spritesheet_none
+     000A4CA2  ___func_tilemap_4                  tilemap_4
+     000A4CA2  _tilemap_4                         tilemap_4
+     000A4E86  ___func_tilemap_5                  tilemap_5
+     000A4E86  _tilemap_5                         tilemap_5
+     000A4FEE  ___func_tilemap_6                  tilemap_6
+     000A4FEE  _tilemap_6                         tilemap_6
+     000A5156  ___func_tileset_5                  tileset_5
+     000A5156  _tileset_5                         tileset_5
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 58.
 Hexadecimal  [32-Bits]
@@ -1820,7 +1841,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE_9                             00094000    00004000 =       16384. bytes (REL,CON)
+_CODE_9                             00094000    00003FFF =       16383. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -1859,21 +1880,16 @@ _CODE_9                             00094000    00004000 =       16384. bytes (R
      00096B9A  _music_track_6_10                  music_track_6__Data
      00096CC7  _music_track_6_11                  music_track_6__Data
      00096E11  _music_track_6__Data               music_track_6__Data
-     00096E1B  ___func_palette_0                  palette_0
-     00096E1B  _palette_0                         palette_0
-     00096E1E  ___func_scene_0_collisions         scene_0_collisions
-     00096E1E  _scene_0_collisions                scene_0_collisions
-     00096F86  ___func_scene_2_collisions         scene_2_collisions
-     00096F86  _scene_2_collisions                scene_2_collisions
-     0009766A  _script_s1_init                    script_s1_init
-     00097681  _spritesheet_none_metasprite       spritesheet_none
-     00097685  _spritesheet_none_metasprites      spritesheet_none
-     00097687  _spritesheet_none                  spritesheet_none
-     0009769A  ___func_tilemap_0                  tilemap_0
-     0009769A  _tilemap_0                         tilemap_0
-     00097D7E  ___func_tileset_4                  tileset_4
-     00097D7E  _tileset_4                         tileset_4
-
+     00096E1B  ___func_scene_0_actors             scene_0_actors
+     00096E1B  _scene_0_actors                    scene_0_actors
+     00096E4D  ___func_scene_0_collisions         scene_0_collisions
+     00096E4D  _scene_0_collisions                scene_0_collisions
+     00096FB5  ___func_scene_2_collisions         scene_2_collisions
+     00096FB5  _scene_2_collisions                scene_2_collisions
+     00097699  ___func_tilemap_0                  tilemap_0
+     00097699  _tilemap_0                         tilemap_0
+     00097D7D  ___func_tileset_4                  tileset_4
+     00097D7D  _tileset_4                         tileset_4
 ASxxxx Linker V03.00 + NoICE + sdld,  page 60.
 Hexadecimal  [32-Bits]
 
@@ -2087,8 +2103,12 @@ C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/palette_0.rel
                                           [ palette_0 ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/palette_1.rel
                                           [ palette_1 ]
+C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/scene_0_actors.rel
+                                          [ scene_0_actors ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/scene_0_collisions.rel
                                           [ scene_0_collisions ]
+C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/scene_0_sprites.rel
+                                          [ scene_0_sprites ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/scene_0.rel
                                           [ scene_0 ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/scene_1_collisions.rel
@@ -2159,6 +2179,8 @@ C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/script_s7_init.rel
                                           [ script_s7_init ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/spritesheet_0.rel
                                           [ spritesheet_0 ]
+C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/spritesheet_1.rel
+                                          [ spritesheet_1 ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/spritesheet_none.rel
                                           [ spritesheet_none ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/tilemap_0.rel
@@ -2185,6 +2207,8 @@ C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/tileset_3.rel
                                           [ tileset_3 ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/tileset_4.rel
                                           [ tileset_4 ]
+C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/tileset_5.rel
+                                          [ tileset_5 ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/main.rel
                                           [ main ]
 C:/Users/Bartek/AppData/Local/Temp/_gbsbuild/obj/adventure.rel
